@@ -1,0 +1,33 @@
+{
+  "groups": [
+    {
+      "name": "cd.distributed-lock",
+      "type": "cn.claredai.common.core.properties.DistributedLockProperties",
+      "sourceType": "cn.claredai.common.core.properties.DistributedLockProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "cd.distributed-lock.retry-times",
+      "type": "java.lang.Integer",
+      "description": "重试次数",
+      "sourceType": "cn.claredai.common.core.properties.DistributedLockProperties",
+      "defaultValue": 100
+    },
+    {
+      "name": "cd.distributed-lock.sleep-millis",
+      "type": "java.lang.Long",
+      "description": "每次重试后等待的时间",
+      "sourceType": "cn.claredai.common.core.properties.DistributedLockProperties",
+      "defaultValue": 100
+    },
+    {
+      "name": "cd.distributed-lock.timeout-millis",
+      "type": "java.lang.Long",
+      "description": "超时时间",
+      "sourceType": "cn.claredai.common.core.properties.DistributedLockProperties",
+      "defaultValue": 5000
+    }
+  ],
+  "hints": []
+}

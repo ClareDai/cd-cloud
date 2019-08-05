@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cd-auth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cd-business" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cd-business/user-center" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cd-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cd-common/common-auth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cd-common/common-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cd-common/common-db" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cd-common/common-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cd-gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cd-gateway/zuul-gateway" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

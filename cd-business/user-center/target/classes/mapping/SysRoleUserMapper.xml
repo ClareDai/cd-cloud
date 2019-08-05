@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.claredai.user.mapper.SysRoleUserMapper">
+    <resultMap id="BaseResultMap" type="cn.claredai.common.core.model.SysRole">
+        <id column="id" property="id"/>
+        <result column="code" property="code"/>
+        <result column="name" property="name"/>
+        <result column="create_time" property="createTime"/>
+        <result column="create_by" property="createBy"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="update_by" property="updateBy"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,code,name,create_time,create_by,update_time,update_by
+    </sql>
+    <sql id="Where_SQL">
+        <trim prefix="where" prefixOverrides="and">
+            <if test="userId != null">
+                user_id = #{userId} and
+            </if>
+            <if test="roleId != null">
+                role_id = #{roleId} and
+            </if>
+        </trim>
+    </sql>
+
+    <select id="selectRolesByUserId" resultMap="BaseResultMap">
+       select r.* from sys_role_user ru
+       inner join sys_role r on r.id = ru.role_id
+       where ru.user_id = #{userId}
+    </select>
+    <insert id="insert">
+        insert into sys_role_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="roleId != null">
+                role_id,
+            </if>
+        </trim>
+        <trim prefix="values(" suffix=")" suffixOverrides=",">
+            <if test="userId != null">
+                user_id = #{userId},
+            </if>
+            <if test="roleId != null">
+                role_id = #{roleId},
+            </if>
+        </trim>
+    </insert>
+
+    <delete id="delete">
+        delete from sys_role_user
+        <include refid="Where_SQL" />
+    </delete>
+</mapper>

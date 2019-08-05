@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cd-auth" />
+        <module name="common-auth" />
+        <module name="common-core" />
+        <module name="common-db" />
+        <module name="common-redis" />
+        <module name="user-center" />
+        <module name="zuul-gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cd-auth" target="1.8" />
+      <module name="cd-business" target="1.8" />
+      <module name="cd-cloud" target="1.8" />
+      <module name="cd-common" target="1.8" />
+      <module name="cd-gateway" target="1.8" />
+      <module name="common-auth" target="1.8" />
+      <module name="common-core" target="1.8" />
+      <module name="common-db" target="1.8" />
+      <module name="common-redis" target="1.8" />
+      <module name="user-center" target="1.8" />
+      <module name="zuul-gateway" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cd-auth/cd-auth.iml" filepath="$PROJECT_DIR$/cd-auth/cd-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cd-business/cd-business.iml" filepath="$PROJECT_DIR$/cd-business/cd-business.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cd-cloud.iml" filepath="$PROJECT_DIR$/cd-cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cd-common/cd-common.iml" filepath="$PROJECT_DIR$/cd-common/cd-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cd-gateway/cd-gateway.iml" filepath="$PROJECT_DIR$/cd-gateway/cd-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cd-common/common-auth/common-auth.iml" filepath="$PROJECT_DIR$/cd-common/common-auth/common-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cd-common/common-core/common-core.iml" filepath="$PROJECT_DIR$/cd-common/common-core/common-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cd-common/common-db/common-db.iml" filepath="$PROJECT_DIR$/cd-common/common-db/common-db.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cd-common/common-redis/common-redis.iml" filepath="$PROJECT_DIR$/cd-common/common-redis/common-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cd-business/user-center/user-center.iml" filepath="$PROJECT_DIR$/cd-business/user-center/user-center.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cd-gateway/zuul-gateway/zuul-gateway.iml" filepath="$PROJECT_DIR$/cd-gateway/zuul-gateway/zuul-gateway.iml" />
+    </modules>
+  </component>
+</project>

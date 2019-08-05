@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "cd.cache-manager",
+      "type": "cn.claredai.common.redis.properties.CacheManagerProperties",
+      "sourceType": "cn.claredai.common.redis.properties.CacheManagerProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "cd.cache-manager.configs",
+      "type": "java.util.List<cn.claredai.common.redis.properties.CacheManagerProperties$CacheConfig>",
+      "sourceType": "cn.claredai.common.redis.properties.CacheManagerProperties"
+    }
+  ],
+  "hints": []
+}

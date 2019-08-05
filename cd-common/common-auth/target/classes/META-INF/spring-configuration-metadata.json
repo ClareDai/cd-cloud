@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "cd.security",
+      "type": "cn.claredai.common.auth.properties.SecurityProperties",
+      "sourceType": "cn.claredai.common.auth.properties.SecurityProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "cd.security.auth",
+      "type": "cn.claredai.common.auth.properties.AuthProperties",
+      "sourceType": "cn.claredai.common.auth.properties.SecurityProperties"
+    },
+    {
+      "name": "cd.security.code",
+      "type": "cn.claredai.common.auth.properties.ValidateCodeProperties",
+      "sourceType": "cn.claredai.common.auth.properties.SecurityProperties"
+    },
+    {
+      "name": "cd.security.ignore",
+      "type": "cn.claredai.common.auth.properties.PermitProperties",
+      "sourceType": "cn.claredai.common.auth.properties.SecurityProperties"
+    }
+  ],
+  "hints": []
+}

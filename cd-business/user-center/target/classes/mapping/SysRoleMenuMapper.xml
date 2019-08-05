@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.claredai.user.mapper.SysRoleMenuMapper">
+    <resultMap id="BaseResultMap" type="cn.claredai.common.core.model.SysMenu">
+        <id column="id" property="id"/>
+        <result column="parent_id" property="parentId"/>
+        <result column="name" property="name"/>
+        <result column="url" property="url"/>
+        <result column="path" property="path"/>
+        <result column="path_method" property="pathMethod"/>
+        <result column="sort" property="sort"/>
+        <result column="type" property="type"/>
+        <result column="hidden" property="hidden"/>
+        <result column="icon" property="icon"/>
+        <result column="create_time" property="createTime"/>
+        <result column="create_by" property="createBy"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="update_by" property="updateBy"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,parent_id,name,url,path,path_method,sort,type,hidden,icon,create_time,create_by,update_time,update_by
+    </sql>
+    <sql id="Where_SQL">
+        <trim prefix="where" prefixOverrides="and">
+            <if test="roleId != null">
+                role_id = #{roleId} and
+            </if>
+            <if test="menuId != null">
+                menu_id = #{menuId} and
+            </if>
+        </trim>
+    </sql>
+
+    <select id="selectMenusByRoleIds" resultMap="BaseResultMap">
+        select distinct t.* from sys_menu t
+        inner join sys_role_menu r on r.menu_id = t.id
+        where
+        r.role_id in
+        <foreach collection="roleIds" index="index" item="roleId"
+                 open="(" separator="," close=")">
+            #{roleId}
+        </foreach>
+        <if test="type != null">
+            and t.type = #{type}
+        </if>
+        ORDER BY sort ASC
+    </select>
+
+    <select id="selectMenusByRoleCodes" resultMap="BaseResultMap">
+        select distinct t.* from sys_menu t
+        inner join sys_role_menu r on r.menu_id = t.id
+        inner join sys_role rl on rl.id = r.role_id
+        where
+        rl.code in
+        <foreach collection="roleCodes" index="index" item="roleCode"
+                 open="(" separator="," close=")">
+            #{roleCode}
+        </foreach>
+        <if test="type != null">
+            and t.type = #{type}
+        </if>
+        ORDER BY sort ASC
+    </select>
+    <insert id="insert">
+        insert into sys_role_menu
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="roleId != null">
+                role_id,
+            </if>
+            <if test="menuId != null">
+                menu_id,
+            </if>
+        </trim>
+        <trim prefix="values(" suffix=")" suffixOverrides=",">
+            <if test="roleId != null">
+                role_id = #{roleId},
+            </if>
+            <if test="menuId != null">
+                menu_id = #{menuId},
+            </if>
+        </trim>
+    </insert>
+    <delete id="delete">
+        delete from sys_role_menu
+        <include refid="Where_SQL" />
+    </delete>
+</mapper>

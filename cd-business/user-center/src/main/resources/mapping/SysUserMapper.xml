@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.claredai.user.mapper.SysUserMapper">
+    <resultMap id="BaseResultMap" type="cn.claredai.common.core.model.SysUser">
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="realname" property="realname"/>
+        <result column="head_img_url" property="headImgUrl"/>
+        <result column="mobile" property="mobile"/>
+        <result column="sex" property="sex"/>
+        <result column="enabled" property="enabled"/>
+        <result column="type" property="type"/>
+        <result column="create_time" property="createTime"/>
+        <result column="create_by" property="createBy"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="update_by" property="updateBy"/>
+        <result column="open_id" property="openId"/>
+        <result column="is_del" property="isDel"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,username,password,realname,head_img_url,mobile,sex,enabled,type,create_time,create_by,update_time,update_by,open_id,is_del
+    </sql>
+</mapper>
